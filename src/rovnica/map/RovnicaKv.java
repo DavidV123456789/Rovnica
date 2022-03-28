@@ -20,11 +20,35 @@ public class RovnicaKv extends RovnicaLN implements Rovnica{
     {
         return a+"x^2"+((b>=0)?"+":"-")+b+"x"+((c>=0)?"+":"-")+c+"=0";
     }
+    private  float getDiskriminant()
+    {
+        return b*b-4*a*c;
+    }
     public Riesenie getPocetKorenov()
     {
-        return null;
+        float result=getDiskriminant();
+        if(result<0)
+        {
+            return Riesenie.ZIADNE;
+        }
+        else if(result>0)
+        {
+            return Riesenie.DVE;
+        }
+        return Riesenie.JEDNO;
     }
     public void vypisKorene()
+    {
+        switch (getPocetKorenov())
+        {
+            case JEDNO -> System.out.println("Koren je:"+" "+((-b)/(2*a)));
+            case ZIADNE -> System.out.println("Nema korene");
+            case DVE -> System.out.println("Koren 1 je:"+" "+((-b+Math.sqrt(getDiskriminant()))/(2*a))+"  Koren 2 je:"+" "+((-b-Math.sqrt(getDiskriminant()))/(2*a)));
+
+        }
+    }
+
+    public void dajRiesenie()
     {
 
     }

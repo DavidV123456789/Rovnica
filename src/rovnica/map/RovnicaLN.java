@@ -37,11 +37,33 @@ public class RovnicaLN implements Rovnica{
     }
     public Riesenie getPocetKorenov()
         {
-            return null;
+            Riesenie result = Riesenie.JEDNO;
+            if(a==0)
+            {
+                if(b==0)
+                {
+                    result= Riesenie.VELA;
+                }
+                else {
+                    result=Riesenie.ZIADNE;
+                }
+            }
+            return  result;
         }
     public void vypisKorene()
     {
+        switch (getPocetKorenov())
+        {
+            case JEDNO -> System.out.println("Koren je:"+" "+(-b/a));
+            case ZIADNE -> System.out.println("Nema korene");
+            case VELA -> System.out.println("Vela korenov");
 
+        }
     }
+    /*
+    public void dajRiesenie()
+    {
+
+    }*/
 }
 
