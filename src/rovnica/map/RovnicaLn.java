@@ -130,6 +130,7 @@ public class RovnicaLn implements Rovnica
 
     private float getFloat ()
     {
+        // pokus sa doplnit 0
         Scanner sc= new Scanner(System.in);
         //next bez typu ako Float číta reťazec po najblizsi biely znak
         /*
