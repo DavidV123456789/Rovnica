@@ -8,3 +8,9 @@ public class Main {
         System.out.println(Prva);
     }
 }
+
+/*
+Zlomok("3/4")
+index of(/)
+matica trojuholníkova
+ */
