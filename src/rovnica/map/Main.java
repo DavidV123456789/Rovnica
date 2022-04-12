@@ -10,7 +10,10 @@ public class Main {
 }
 
 /*
-Zlomok("3/4")
+
+Trieda ZLOMOK{}
+Zlomok("3/4")//výnimky
 index of(/)
 matica trojuholníkova
+zlomky: +;-;*;/;
  */
